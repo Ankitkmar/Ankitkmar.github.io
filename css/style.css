@@ -43,6 +43,10 @@ blockquote:after {
 	right: -5rem;
 	bottom: 1rem;
 }
+.flip-card-back p {
+  margin-top: 40px;
+}
+
 
 .layout_padding {
   padding-top: 90px;
@@ -911,6 +915,7 @@ a:focus {
 
 .info_section .info_contact p {
   margin: 0;
+  text-align: center;
 }
 
 .info_section .info_contact > div {
@@ -1001,7 +1006,7 @@ a:focus {
   color: #171717;
   margin: 0;
   padding: 25px 0 20px 0;
-  margin: 0 auto;
+  margin: 100px auto;
   text-align: center;
   font-size: 17px;
 }
@@ -1013,7 +1018,6 @@ a:focus {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -1043,23 +1047,46 @@ a:focus {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: white;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  position: relative;
+  min-width: 320px;
+  height: 218px;
+  text-align: center;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+  5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
   transform: rotateY(180deg);
 }
+.flip-card-back p {
+  margin-top: 40px;
+}
 
-.card {
+/* .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 100%;
   margin: auto;
   text-align: center;
+} */
+.card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
 }
+
 
 .title {
   color: grey;
